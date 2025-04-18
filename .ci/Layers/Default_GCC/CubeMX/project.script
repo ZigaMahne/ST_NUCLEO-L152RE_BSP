@@ -1,0 +1,4 @@
+loadboard NUCLEO-L152RE allmodes
+project name STM32CubeMX
+project toolchain "STM32CubeIDE"
+SetCopyLibrary "copy only"
