@@ -81,7 +81,6 @@
       <book category="schematic" name="https://www.st.com/resource/en/schematic_pack/mb1136-default-c03_schematic.pdf" title="Schematics"/>
       <book category="other"     name="Documents/README.md" title="Guide"/>
       <mountedDevice    deviceIndex="0" Dvendor="STMicroelectronics:13" Dname="STM32L152RETx"/>
-      <compatibleDevice deviceIndex="0" Dvendor="STMicroelectronics:13" DsubFamily="STM32L152"/>
       <feature type="ODbg"      n="1"              name="On-board ST-LINK/V2-1"/>
       <feature type="PWR"       n="4"              name="USB VBUS, ext. VIN, ext. 5V, ext +3.3V"/>
       <feature type="CustomFF"  n="2"              name="STMicroelectronics Morpho connector"/>
