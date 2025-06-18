@@ -21,6 +21,10 @@
       - rename thread IDs
       - modify app_main_thread (replace loop forever)
       - add DWARF-5 debug information
+      - add Blinky+NUCLEO-L152RE.dbgconf and Blinky+NUCLEO-L152RE.dbgconf.base@0.0.0 files for the Blinky example
+      - updated settings in vcpkg-configuration.json file to use cmsis-toolbox 2.9.0
+      - updated RTE_Components.h file.
+      - updated Test-Examples.yml workflow.
     </release>
   </releases>
 
