@@ -1,8 +1,8 @@
 /******************************************************************************
  * @file     vio_NUCLEO-L152RE.c
  * @brief    Virtual I/O implementation for board NUCLEO-L152RE
- * @version  V1.0.0
- * @date     17. April 2025
+ * @version  V1.1.0
+ * @date     17. July 2025
  ******************************************************************************/
 /*
  * Copyright (c) 2025 Arm Limited (or its affiliates).
@@ -30,6 +30,9 @@ The table below lists the physical I/O mapping of this CMSIS-Driver VIO implemen
 | Virtual I/O   | Variable       | Board component      | Pin
 |:--------------|:---------------|:---------------------|:------
 | vioBUTTON0    | vioSignalIn.0  | USER button (B1)     | PC13
+| vioLED0       | vioSignalOut.0 | LED Green   (LD2)    | PA5
+
+Note: The pin LED LD2 conflict with the pin SPI1_SCK on the board. The #define VIO_DISABLE_LD2 disables this LED.
 */
 
 #include "cmsis_vio.h"
@@ -66,7 +69,12 @@ typedef struct {
 
 #if !defined CMSIS_VOUT
 // VOUT Configuration
-static const pinCfg_t outputCfg[] = {};
+static const pinCfg_t outputCfg[] = {
+#if !defined VIO_DISABLE_LD2
+//  signal,     pin,                   pull resistor,      active state
+  { vioLED0,    GPIO_PIN_ID_PORTA(5),  ARM_GPIO_PULL_NONE, VIO_ACTIVE_HIGH }
+#endif
+};
 #endif
 
 #if !defined CMSIS_VIN
