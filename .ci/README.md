@@ -2,7 +2,8 @@
 
 Content of `.ci` Directory   | Description
 :----------------------------|:-----------------
-`./Layers/Default_GCC`       | Default Board layer for the GCC compiler.
+`./Layers/Default_GCC`       | Default Board layer (configured without SPI1) for the GCC compiler.
+`./Layers/SPI1_GCC`          | SPI1 Board layer (configured with SPI1 interface instead of LD2) for the GCC compiler.
 `vcpkg-configuration.json`   | Tool setup for the CI test
 
 The [GitHub Actions](https://github.com/Open-CMSIS-Pack/ST_NUCLEO-L152RE_BSP/tree/main/README.md#github-actions) in the directory [`.github/workflows`](https://github.com/Open-CMSIS-Pack/ST_NUCLEO-L152RE_BSP/tree/main/.github/workflows) are the scripts for the CI tests. These scripts contain detailed comments about each step that is executed.

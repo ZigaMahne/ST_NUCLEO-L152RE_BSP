@@ -1,5 +1,5 @@
 generator-import:
-  for-device: STM32L152RETx
+  for-device: STMicroelectronics::STM32L152RETx
   for-board: NUCLEO-L152RE
   define:
     - USE_HAL_DRIVER
@@ -36,5 +36,4 @@ generator-import:
         - file: ./STM32CubeMX/Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_pwr_ex.c
         - file: ./STM32CubeMX/Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_cortex.c
         - file: ./STM32CubeMX/Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_exti.c
-        - file: ./STM32CubeMX/Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_spi.c
         - file: ./STM32CubeMX/Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_uart.c

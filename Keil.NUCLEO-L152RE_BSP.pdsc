@@ -27,6 +27,9 @@
       - update README.md file
       - add DWARF-5 debug information
       - add generated output files
+      Layers:
+      -- modify Default layer (remove SPI1 support)
+      -- add SPI1 board layer
     </release>
   </releases>
 
@@ -77,6 +80,7 @@
 
   <csolution>
     <clayer type="Board" path="Layers/Default" file="Board.clayer.yml" copy-to="Board/NUCLEO-L152RE" condition="NUCLEO-L152RE"/>
+    <clayer type="Board" path="Layers/SPI1   " file="Board.clayer.yml" copy-to="Board/NUCLEO-L152RE" condition="NUCLEO-L152RE"/>
   </csolution>
 
   <boards>

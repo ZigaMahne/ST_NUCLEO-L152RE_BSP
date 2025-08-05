@@ -73,12 +73,8 @@ extern int shield_setup (void);
 #define USART_TX_GPIO_Port GPIOA
 #define USART_RX_Pin GPIO_PIN_3
 #define USART_RX_GPIO_Port GPIOA
-#define ARD_D13_Pin GPIO_PIN_5
-#define ARD_D13_GPIO_Port GPIOA
-#define ARD_D12_Pin GPIO_PIN_6
-#define ARD_D12_GPIO_Port GPIOA
-#define ARD_D11_Pin GPIO_PIN_7
-#define ARD_D11_GPIO_Port GPIOA
+#define USER_LED_Pin GPIO_PIN_5
+#define USER_LED_GPIO_Port GPIOA
 #define ARD_D9_Pin GPIO_PIN_7
 #define ARD_D9_GPIO_Port GPIOC
 #define ARD_D9_EXTI_IRQn EXTI9_5_IRQn

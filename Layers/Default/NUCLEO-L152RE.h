@@ -22,7 +22,6 @@
 
 #include "GPIO_STM32.h"
 #include "Driver_I2C.h"
-#include "Driver_SPI.h"
 #include "Driver_USART.h"
 
 // Arduino Connector Digital I/O
@@ -37,6 +36,8 @@
 #define ARDUINO_UNO_D8      GPIO_PIN_ID_PORTA(9U)
 #define ARDUINO_UNO_D9      GPIO_PIN_ID_PORTC(7U)
 #define ARDUINO_UNO_D10     GPIO_PIN_ID_PORTB(6U)
+#define ARDUINO_UNO_D11     GPIO_PIN_ID_PORTA(7U)
+#define ARDUINO_UNO_D12     GPIO_PIN_ID_PORTA(6U)
 #define ARDUINO_UNO_D14     GPIO_PIN_ID_PORTA(0U)
 #define ARDUINO_UNO_D15     GPIO_PIN_ID_PORTA(1U)
 #define ARDUINO_UNO_D16     GPIO_PIN_ID_PORTA(4U)
@@ -46,14 +47,12 @@
 
 // CMSIS Driver instances on Arduino Connector
 #define ARDUINO_UNO_I2C     1           // I2C1
-#define ARDUINO_UNO_SPI     1           // SPI1
 
 // CMSIS Driver instance for STDIO retarget
 #define RETARGET_STDIO_UART 2
 
 // CMSIS Drivers
 extern ARM_DRIVER_I2C       ARM_Driver_I2C_(ARDUINO_UNO_I2C);           // Arduino I2C
-extern ARM_DRIVER_SPI       ARM_Driver_SPI_(ARDUINO_UNO_SPI);           // Arduino SPI
 extern ARM_DRIVER_USART     ARM_Driver_USART_(RETARGET_STDIO_UART);     // ST-LINK
 
 #ifdef   CMSIS_shield_header

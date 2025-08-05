@@ -24,11 +24,10 @@ Refer to ["Configure STM32 Devices with CubeMX"](https://open-cmsis-pack.github.
 
 | CMSIS-Driver          | Peripheral            | Board connector/component                             | Connection
 |:----------------------|:----------------------|:------------------------------------------------------|:------------------------------
-| Driver_GPIO0          | GPIO                  | Arduino digital I/O pins D2..D10, D14..D19            | ARDUINO_UNO_D2..D10, D14..D19
+| Driver_GPIO0          | GPIO                  | Arduino digital I/O pins D0..D12, D14..D19            | ARDUINO_UNO_D0..D12, D14..D19
 | Driver_I2C1           | I2C1                  | Arduino I2C pins D20..D21                             | ARDUINO_UNO_I2C
-| Driver_SPI1           | SPI1                  | Arduino SPI pins D11..D13                             | ARDUINO_UNO_SPI
 | Driver_USART2         | USART2                | ST-LINK connector (CN1)                               | STDIN, STDOUT, STDERR
-| CMSIS-Driver VIO      | GPIO                  | USER button (B1)                                      | CMSIS_VIO
+| CMSIS-Driver VIO      | GPIO                  | LED (LD2) and USER button (B1)                        | CMSIS_VIO
 
 Reference to [Arduino UNO connector description](https://open-cmsis-pack.github.io/cmsis-toolbox/ReferenceApplications/#arduino-shield).
 
@@ -37,5 +36,6 @@ Reference to [Arduino UNO connector description](https://open-cmsis-pack.github.
 | CMSIS-Driver VIO      | Board component
 |:----------------------|:--------------------------------------
 | vioBUTTON0            | USER button (B1)
+| vioLED0               | LED Green   (LD2)
 
 > **Note:**  Layer has been created with Firmware Package STM32Cube_FW_L1_V1.10.5.

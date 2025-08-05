@@ -1,6 +1,6 @@
 layer:
   type: Board
-  description: Default NUCLEO-L152RE board setup
+  description: Default NUCLEO-L152RE board setup - configured without SPI1
   for-board: STMicroelectronics::NUCLEO-L152RE
 
   generators:
@@ -14,7 +14,6 @@ layer:
       provides:
         - CMSIS_VIO
         - ARDUINO_UNO_I2C
-        - ARDUINO_UNO_SPI
         - ARDUINO_UNO_D0
         - ARDUINO_UNO_D1
         - ARDUINO_UNO_D2
@@ -26,6 +25,8 @@ layer:
         - ARDUINO_UNO_D8
         - ARDUINO_UNO_D9
         - ARDUINO_UNO_D10
+        - ARDUINO_UNO_D11
+        - ARDUINO_UNO_D12
         - ARDUINO_UNO_D14
         - ARDUINO_UNO_D15
         - ARDUINO_UNO_D16
@@ -54,7 +55,6 @@ layer:
 
     - component: CMSIS Driver:GPIO
     - component: CMSIS Driver:I2C
-    - component: CMSIS Driver:SPI
     - component: CMSIS Driver:USART
     - component: CMSIS Driver:VIO:Board
 
